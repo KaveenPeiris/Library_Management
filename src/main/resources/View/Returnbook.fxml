@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="450.0" prefWidth="550.0" spacing="15.0" style="-fx-background-color: #fff3b0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReturnBookController">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+    <children>
+        <Label text="Return Book" textFill="#3d314a">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <GridPane hgap="15.0" vgap="15.0">
+            <children>
+                <Label text="Search Issued Book ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="txtIssueId" promptText="Enter Issue ID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label text="Member Info:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="lblMemberInfo" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Borrowed Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label fx:id="lblBorrowedDate" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label text="Due Date:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label fx:id="lblDueDate" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label text="Return Date:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <DatePicker fx:id="dpReturnDate" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+        <HBox alignment="CENTER_RIGHT" spacing="10.0">
+            <children>
+                <Button fx:id="btnReturn" onAction="#btnReturnOnAction" style="-fx-background-color: #2a9d8f; -fx-text-fill: white; -fx-font-weight: bold;" text="Return Book" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

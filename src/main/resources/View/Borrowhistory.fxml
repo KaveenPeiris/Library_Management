@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="850.0" spacing="15.0" style="-fx-background-color: #fff3b0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BorrowingHistoryController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="Borrowing History" textFill="#3d314a">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblHistory" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colMemberId" prefWidth="120.0" text="Member ID" />
+                <TableColumn fx:id="colBookTitle" prefWidth="220.0" text="Book Title" />
+                <TableColumn fx:id="colIssueDate" prefWidth="130.0" text="Issue Date" />
+                <TableColumn fx:id="colDueDate" prefWidth="130.0" text="Due Date" />
+                <TableColumn fx:id="colReturnDate" prefWidth="130.0" text="Return Date" />
+                <TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>

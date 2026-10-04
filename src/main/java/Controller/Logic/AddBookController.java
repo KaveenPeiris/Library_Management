@@ -1,13 +1,13 @@
-package Model;
+package Controller.Logic;
 
-public class BookMangementController {
+public class AddBookController {
     private String id;
     private String title;
     private String author;
     private String category;
     private int qty;
 
-    public BookMangementController(String id, String title, String author, String category, int qty) {
+    public AddBookController(String id, String title, String author, String category, int qty) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -15,6 +15,7 @@ public class BookMangementController {
         this.qty = qty;
     }
 
+    // Getters and Setters
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 
@@ -30,3 +31,4 @@ public class BookMangementController {
     public int getQty() { return qty; }
     public void setQty(int qty) { this.qty = qty; }
 }
+
